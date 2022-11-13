@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Link Encoding</title>
+    <meta name="keywords" content="spam,munge,obfuscate,email,address,mailto" />
+    <meta name="description" content="Tool for encryption of a mailto: html Tag" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <script type="text/javascript" language="JavaScript">
+    <!--
+      function Dec2Hex(Decimal) {
+        var hexChars = "0123456789ABCDEF";
+        var a = Decimal % 16;
+        var b = (Decimal - a)/16;
+        hex = "" + hexChars.charAt(b) + hexChars.charAt(a);
+        return hex;
+      }
+
+      function encode() {
+        txt =   '&#109;&#97;&#105;&#108;&#116;&#111;&#58;'
+        address = document.inputForm.emailInput.value
+          for (j=0; j<address.length; j++)
+          {
+            txt += '%' + Dec2Hex(address.charCodeAt(j))
+          }
+        txt = '<a href=\"' + txt + '\">' + 'email me' + '<' + '/a>'
+        document.outputForm.source.value=txt
+      }
+
+      function copy() {
+        let textarea = document.getElementById("textarea");
+        textarea.select();
+        document.execCommand("copy");
+      }
+
+
+    // -->
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div id=content-wrap>
+        <div class="title">
+          <img src="/header-image.svg" alt="logo">
+
+          <h1>Anti Spam E-Mail Links</h1>
+
+        </div>
+
+        <h3>Obfuscate your email</h3>
+        
+        <noscript><p><code><b>Note:</b> You need to enable JavaSript in your browser to use this form...</code></p></noscript> 
+        
+        <form name="inputForm" ACTION="javascript:encode()">
+
+          <p>Type the email address in this box: 
+            <input type="text" name="emailInput" />
+            <input type="button" onClick="encode()" VALUE="Encode" />
+          </p>
+
+        </form>
+
+        <form name="outputForm" action="">
+          Cut and paste the resultant <code>mailto:</code>  code into your HTML document.<br />
+          <textarea id="textarea" name="source" rows="4" cols="80"></textarea>
+          <br/>
+          <button class="button_copy" type="button" onclick="copy()">Copy</button>
+        </form>
+
+        <div class="about">
+          
+
+          <p class="strong">About:</p>
+  
+          <p>This form takes the email address and converts it into the hex code for each 
+            character. It then creates a <code>mailto:</code>  tag composed of these codes.
+          </p>
+  
+          <p>This page will output the HTML mailto: tag containing those codes which you 
+            will need to copy and put in your page where you want you address to appear.
+          </p>
+  
+          <p>Someone using a normal browser will see your address and be able to mail you 
+            via a standard <code>mailto:</code> link, however any e-mail harvesting agents 
+            will merely see something like <code>%74%72%65%65%74%6D%65%40%68%6F%74%6D%61%69%6C%2E%63%6F%6D</code> 
+            instead of a real email address.
+          </p>
+  
+          <p>Of course, someone could write an email harvester that could convert this all 
+            back to your email address. However the likelihood of that is remote. <noscript></noscript> 
+          </p>
+
+          <p>see also: &nbsp;  <a class="strong" href="https://github.com/Liechti-IT/encoding-mail_link">GitHub Repository</A>
+          </p>
+
+        </div>
+        
+
+      </div>
+      
+      <footer>
+        <p>Copyright © 2022</p>
+      </footer>
+
+    </div>
+
+  </body>
+
+</html>
+

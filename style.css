@@ -1,0 +1,208 @@
+
+/* ------ Import Font ------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
+/* ------ Set Root for easy Responsive Fonts ------ */
+
+:root {
+    font-size: 100%;
+}
+
+* {
+    margin: 0;
+}
+/* ------ Body ------ */
+
+body {
+    background-color: #262626;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    --max-width: 1110px;
+    --padding: 1rem;
+    width: min(var(--max-width), 100% - (var(--padding)*2));
+    margin-inline: auto;
+    text-align: center;
+    min-height: 97vh;
+    position: relative;
+    }
+
+h1 {
+    font-size: 5rem;
+    color: #ce542f;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+h3 {
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+form {
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+.note {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+
+button {
+    border-radius: 100vmax;
+    border: 0;
+    padding: 0.5em 3em;
+    color: white;
+    background-color: #2FCD6E;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 2rem;
+    }
+
+button p {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#content-wrap {
+    padding-bottom: 2.5rem;
+    text-align: left;
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
+.about {
+    color: rgb(255, 255, 255);
+    background-color: #2e2e2e;
+    padding: 2px;
+    margin-top: 4rem;
+}
+
+.about p {
+    margin: 0.8rem;
+    line-height: 1.4rem;
+}
+
+.about strong {
+    margin: 0.8rem;
+}
+
+.strong {
+    font-weight: 700;
+}
+
+code {
+    color: #ce542f;
+    background-color: #505050;
+    padding: 2px;
+    border-radius: 5px;
+  }
+
+textarea {
+    background-color: #505050;
+    border: none;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    color: #ffffff;
+    resize: none;
+    font-size: 1rem;
+}
+
+input {
+    background-color: #505050;
+    border: none;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+input[type=button] {
+    border-radius: 5px;
+    border: 0;
+    color: white;
+    background-color: #ce542f;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.title {
+    display: grid;
+    justify-content: center;
+}
+
+img {
+    margin-top: 4rem;
+    width: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button_copy {
+    background-color: #ce542f;
+    border: none;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* ------ Mobile Media Querys ------ */
+
+@media (max-width:50em) {
+
+    :root {
+    font-size: 50%;
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    .button_copy {
+        width: 100%;
+    }
+}
+
+@media (max-width:400px) {
+    img {
+        width: 10rem;
+    }
+
+    :root {
+        font-size: 40%;
+    }
+}
